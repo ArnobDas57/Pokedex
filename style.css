@@ -45,3 +45,37 @@ p {
  top: 100px;
  padding-bottom: 20px;
 }
+
+form {
+    display: block;
+    text-align: center;
+}
+  
+ul {
+    list-style-type: none;
+    font-size: x-large;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.caption {
+    display: block;
+    position: relative;
+}
+
+li {
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px;
+}
