@@ -96,3 +96,12 @@ function validateInput2()
         }
     }
 }
+
+//this function is attached to the span element within the popup
+//when the x icon is clicked on the popup the closePopUp() function will close the the popup by getting the element id and setting the popup style to be blank
+function closePopup()
+{
+    var popup = document.getElementById("myPopup");
+    popup.style.display = "none";
+}
+
