@@ -142,3 +142,32 @@ li:nth-child(19),li:nth-child(20){
     border-top: 3px solid rgb(69, 8, 110);
     border-bottom: 3px solid rgb(69, 8, 110);
   }
+
+  input {
+    box-sizing: content-box;
+    outline: rgb(34, 2, 18);
+    font-family: 'Comfortaa', cursive;
+    font-size: large;
+    height: 40px;
+    width: 270px;
+    border-radius: 25px;
+    margin-right: 5px;
+    background: #ffffff;
+    text-align: center;
+   }
+  
+  button {
+    position: relative;
+    display: inline;
+    font-family: 'Comfortaa', cursive;
+    font-size: large;
+    margin: none;
+    background: #0765f1;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #4cda0b;
+  }
+  
