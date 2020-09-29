@@ -1,0 +1,5 @@
+#Ignore pokemon images folder
+pokemon/
+
+#Ignore all png files
+*.png

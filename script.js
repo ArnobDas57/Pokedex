@@ -1,11 +1,4 @@
 
-var div = document.createElement("DIV");
-div.className = "contentBlock";
-div.id = "myCB";
-
-var list = document.createElement("UL"); 
-div.appendChild(list);
-
 //function that will validate input that should be a number between 1-20
 function validateInput1()
  {
