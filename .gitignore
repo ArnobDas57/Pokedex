@@ -1,0 +1,5 @@
+#Include Pokemon images
+pokemon/
+
+#Ignore all .png files
+*.png
