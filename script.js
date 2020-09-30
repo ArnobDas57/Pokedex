@@ -1,12 +1,19 @@
+let div = document.createElement("DIV");
+div.className = "contentBlock";
+div.id = "myCB";
+
+let list = document.createElement("UL"); 
+div.appendChild(list);
+
 
 //function that will validate input that should be a number between 1-20
 function validateInput1()
  {
-    var searchInput1 = document.getElementById("input1").value;
-    var ul = document.getElementById("poke-list");
-    var popup = document.getElementById("myPopup");
-    var li = ul.getElementsByTagName("li");
-    var text;
+    let searchInput1 = document.getElementById("input1").value;
+    let ul = document.getElementById("poke-list");
+    let popup = document.getElementById("myPopup");
+    let li = ul.getElementsByTagName("li");
+    let text;
 
     //if statement to check if first search box input is a number between 1-20
     //if no criteria is met popup block appears and error text appears
@@ -23,11 +30,11 @@ function validateInput1()
     {
         popup.style.display = "block";
 
-        var counter = 0;
+        let counter = 0;
 
         /* for loop iterates 20 times (length of li array), if the li array element at current iteration number includes the search input within the text then
         the pokemon at that array position is added to the popup of results */
-        for(var i = 0; i < li.length; i++)
+        for(let i = 0; i < li.length; i++)
         {
             if((li[i].textContent).includes(searchInput1))
             {
@@ -45,16 +52,17 @@ function validateInput1()
 //function that will validate input that should contain letters and no more than 20 characters
 function validateInput2()
  {
-    var searchInput2 = document.getElementById("input2").value;
-    var ul = document.getElementById("poke-list");
-    var popup = document.getElementById("myPopup");
-    var li = ul.getElementsByTagName("li");
-    var c, text;
+    let searchInput2 = document.getElementById("input2").value;
+    let filter = searchInput2.toUpperCase();
+    let ul = document.getElementById("poke-list");
+    let popup = document.getElementById("myPopup");
+    let li = ul.getElementsByTagName("li");
+    let c, text;
 
     /* for loop iterates through each character of the second search box input,
     if statement checks if each character is a letter, if the character's lowercase equals the characters uppercase that
     means it is not a letter (for ex: 'a' does not equal to 'A')*/
-    for (c of searchInput2)
+    for (c of filter)
     {
         if(c.toLowerCase() === c.toUpperCase())
         {
@@ -66,7 +74,7 @@ function validateInput2()
     }
 
     //if the search box input is empty or has more than 20 characters than popup with error text appears
-    if(searchInput2.length > 20 || searchInput2.length < 1)
+    if(filter.length > 20 || filter.length < 1)
     {
         popup.style.display = "block";
 
@@ -79,13 +87,13 @@ function validateInput2()
     {
         popup.style.display = "block";
 
-        var counter = 0;
+        let counter = 0;
 
        /* for loop iterates 20 times (length of li array), if the li array element at current iteration number includes the search input within the text then
         the pokemon at that array position is added to the popup of results */
-        for(var i = 0; i < li.length; i++)
+        for(let i = 0; i < li.length; i++)
         {
-            if((li[i].textContent).includes(searchInput2))
+            if((li[i].textContent).includes(filter))
             {
                 text = li[i].textContent;
                 document.getElementById("p" + (counter + 1)).innerHTML = text;
@@ -101,7 +109,19 @@ function validateInput2()
 //when the x icon is clicked on the popup the closePopUp() function will close the the popup by getting the element id and setting the popup style to be blank
 function closePopup()
 {
-    var popup = document.getElementById("myPopup");
+    let popup = document.getElementById("myPopup");
     popup.style.display = "none";
 }
 
+function dynamicSearch1()
+{
+    let input = document.getElementById("input1");
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("poke-list");
+    let li = ul.getElementsByClassName("pokemonImages");
+    let contentBlock = document.getElementById("myPopup");
+    let x;
+
+   
+
+}
