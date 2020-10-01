@@ -51,7 +51,7 @@ form {
     text-align: center;
 }
   
-ul {
+#poke-list {
     list-style-type: none;
     font-size: x-large;
     display: grid;
@@ -72,7 +72,7 @@ img {
     position: relative;
 }
 
-li {
+.pokemonImages {
   padding: 10px;
   border-radius: 12px;
   display: inline-block;
@@ -80,7 +80,7 @@ li {
   margin: 30px;
 }
 
-li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+.pokemonImages:nth-child(1), .pokemonImages:nth-child(2), .pokemonImages:nth-child(3) {
     color: rgb(10, 221, 140);
     background-color: #0e8a60;
     border-left: 3px solid rgb(10, 221, 140);
@@ -89,7 +89,7 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3) {
     border-bottom: 3px solid rgb(10, 221, 140);
   }
 
-li:nth-child(4),li:nth-child(5),li:nth-child(6) {
+  .pokemonImages:nth-child(4),.pokemonImages:nth-child(5),.pokemonImages:nth-child(6) {
     color: rgb(83, 51, 14);
     background-color: #e28c0b;
     border-left: 3px solid rgb(250, 110, 17);
@@ -98,7 +98,7 @@ li:nth-child(4),li:nth-child(5),li:nth-child(6) {
     border-bottom: 3px solid rgb(250, 110, 17);
   }
 
-li:nth-child(7),li:nth-child(8),li:nth-child(9) {
+  .pokemonImages:nth-child(7),.pokemonImages:nth-child(8),.pokemonImages:nth-child(9) {
     color: rgb(8, 20, 133);
     background-color: #0e8ce0;
     border-left: 3px solid rgb(10, 29, 201);
@@ -107,7 +107,7 @@ li:nth-child(7),li:nth-child(8),li:nth-child(9) {
     border-bottom: 3px solid rgb(10, 29, 201);
   }
 
-li:nth-child(10),li:nth-child(11),li:nth-child(12){
+  .pokemonImages:nth-child(10),.pokemonImages:nth-child(11),.pokemonImages:nth-child(12){
     color: rgb(92, 8, 95);
     background-color: #c99ec5;
     border-left: 3px solid rgb(92, 8, 95);
@@ -116,7 +116,7 @@ li:nth-child(10),li:nth-child(11),li:nth-child(12){
     border-bottom: 3px solid rgb(92, 8, 95);
   }
 
-li:nth-child(13),li:nth-child(14),li:nth-child(15){
+  .pokemonImages:nth-child(13),.pokemonImages:nth-child(14),.pokemonImages:nth-child(15){
     color: rgb(128, 2, 2);
     background-color: #e4f82d;
     border-left: 3px solid rgb(160, 138, 14);
@@ -125,7 +125,7 @@ li:nth-child(13),li:nth-child(14),li:nth-child(15){
     border-bottom: 3px solid rgb(160, 138, 14);
   }
 
-li:nth-child(16),li:nth-child(17),li:nth-child(18){
+  .pokemonImages:nth-child(16),.pokemonImages:nth-child(17),.pokemonImages:nth-child(18){
     color: rgb(221, 92, 32);
     background-color: #553711;
     border-left: 3px solid rgb(221, 92, 32);
@@ -134,7 +134,7 @@ li:nth-child(16),li:nth-child(17),li:nth-child(18){
     border-bottom: 3px solid rgb(221, 92, 32);
   }
 
-li:nth-child(19),li:nth-child(20){
+  .pokemonImages:nth-child(19),.pokemonImages:nth-child(20){
     color: rgb(28, 4, 44);
     background-color: #f70f96;
     border-left: 3px solid rgb(69, 8, 110);
@@ -237,3 +237,22 @@ li:nth-child(19),li:nth-child(20){
     text-indent: 20px;
   }
   
+  .contentBlock
+  {
+    
+    border-collapse: collapse;
+    display: none;
+    background-color: #f804d8;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(73, 9, 9);
+    font-size: 18px;
+  }
+
+  #divlist
+  {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #cc8b37;
+  }

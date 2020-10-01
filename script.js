@@ -1,11 +1,3 @@
-let div = document.createElement("DIV");
-div.className = "contentBlock";
-div.id = "myCB";
-
-let list = document.createElement("UL"); 
-div.appendChild(list);
-
-
 //function that will validate input that should be a number between 1-20
 function validateInput1()
  {
@@ -113,15 +105,44 @@ function closePopup()
     popup.style.display = "none";
 }
 
-function dynamicSearch1()
+var div = document.createElement("div");
+div.className = "contentBlock";
+div.id = "myCB";
+document.body.appendChild(div);
+
+var list = document.createElement("ul"); 
+list.id = "divList";
+div.body.appendChild(list);
+
+function dynamicSearch2()
 {
-    let input = document.getElementById("input1");
-    let filter = input.value.toUpperCase();
+    let input = document.getElementById("input1").value;
+    let filter = input.toUpperCase();
     let ul = document.getElementById("poke-list");
     let li = ul.getElementsByClassName("pokemonImages");
-    let contentBlock = document.getElementById("myPopup");
-    let x;
+    let contentBlock = document.getElementById("myCB");
+    let x, txtValue;
 
-   
+    contentBlock.style.display = "block";
 
+    for(let i = 0; i < li.length; i++)
+    {
+        x = li[i].getElementsByTagName("span")[0];
+
+        txtValue = a.textContent;
+
+        if(txtValue.toUpperCase().indexOf(filter) > -1)
+        {
+            let listElement = document.createElement("li");
+            listElement.textContent = li[i]; 
+            list.appendChild(listElement);
+
+            list[i].style.display = "";
+        }
+
+        else
+        {
+            contentBlock.style.display = "none";
+        }
+    }
 }
