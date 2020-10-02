@@ -237,22 +237,36 @@ img {
     text-indent: 20px;
   }
   
-  .contentBlock
-  {
-    
-    border-collapse: collapse;
-    display: none;
-    background-color: #f804d8;
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgb(73, 9, 9);
-    font-size: 18px;
+  .contentBlock {
+    position: relative;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border: 2px solid #000000;
+    width: 70%;
+    text-align: left;
   }
 
-  #divlist
+  h4 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .newList
   {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #cc8b37;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    margin-bottom: 5px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(15, 6, 54);
+    display: inline-block;
+  }
+
+  .newList:hover:not(.header) {
+    background-color: rgb(172, 158, 158);
   }

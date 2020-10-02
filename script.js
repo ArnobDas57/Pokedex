@@ -15,6 +15,10 @@ function validateInput1()
 
         text = "Input not valid - Please enter a number between 1-20";
         document.getElementById("p1").innerHTML = text;
+        document.getElementById("p2").innerHTML = " ";
+        document.getElementById("p3").innerHTML = " ";
+        document.getElementById("p4").innerHTML = " ";
+        document.getElementById("p5").innerHTML = " ";
     }
 
     //if criteria is met popup block appears and shows up to 5 results
@@ -62,16 +66,24 @@ function validateInput2()
 
             text = "Input not valid - Please enter letters A-Z or a-z and no more than 20 characters";
             document.getElementById("p1").innerHTML = text;
+            document.getElementById("p2").innerHTML = " ";
+            document.getElementById("p3").innerHTML = " ";
+            document.getElementById("p4").innerHTML = " ";
+            document.getElementById("p5").innerHTML = " ";
         }
     }
 
     //if the search box input is empty or has more than 20 characters than popup with error text appears
-    if(filter.length > 20 || filter.length < 1)
+    if(filter.length > 20 || filter.length < 1 || !isNaN(filter))
     {
         popup.style.display = "block";
 
         text = "Input not valid - Please enter letters A-Z or a-z and no more than 20 characters";
         document.getElementById("p1").innerHTML = text;
+        document.getElementById("p2").innerHTML = " ";
+        document.getElementById("p3").innerHTML = " ";
+        document.getElementById("p4").innerHTML = " ";
+        document.getElementById("p5").innerHTML = " ";
     }
 
     //if there are no errors in the search box input then else statement will run
@@ -108,41 +120,53 @@ function closePopup()
 var div = document.createElement("div");
 div.className = "contentBlock";
 div.id = "myCB";
-document.body.appendChild(div);
+
+var divHeader = document.createElement("h4");
+divHeader.textContent = "RESULTS";
+div.appendChild(divHeader);
+
+var bottomSearch = document.getElementById("search2");
+bottomSearch.appendChild(div);
 
 var list = document.createElement("ul"); 
-list.id = "divList";
-div.body.appendChild(list);
+list.className = "divList";
+list.id = "myList"
+var ul = document.getElementById("poke-list");
+var li = ul.getElementsByClassName("pokemonImages");
+var listElement;
+
+for(let i = 0; i < li.length; i++)
+{
+    listElement = document.createElement("li");
+    listElement.textContent = li[i].textContent; 
+    listElement.setAttribute("class","newList");
+    list.appendChild(listElement);
+}
+
+div.appendChild(list);
 
 function dynamicSearch2()
 {
-    let input = document.getElementById("input1").value;
-    let filter = input.toUpperCase();
-    let ul = document.getElementById("poke-list");
-    let li = ul.getElementsByClassName("pokemonImages");
-    let contentBlock = document.getElementById("myCB");
+    let input = document.getElementById("input2");
+    let filter = input.value.toUpperCase();
+    var mylist = document.getElementById("myList");
+    var listElement = mylist.getElementsByTagName("li");
     let x, txtValue;
-
-    contentBlock.style.display = "block";
 
     for(let i = 0; i < li.length; i++)
     {
         x = li[i].getElementsByTagName("span")[0];
 
-        txtValue = a.textContent;
+        txtValue = x.textContent;
 
         if(txtValue.toUpperCase().indexOf(filter) > -1)
         {
-            let listElement = document.createElement("li");
-            listElement.textContent = li[i]; 
-            list.appendChild(listElement);
-
-            list[i].style.display = "";
+            listElement[i].style.display = "";
         }
 
         else
         {
-            contentBlock.style.display = "none";
+            listElement[i].style.display = "none";
         }
     }
 }
