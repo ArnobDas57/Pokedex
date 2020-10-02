@@ -240,7 +240,7 @@ img {
   .contentBlock {
     position: relative;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-image: linear-gradient(to bottom right, rgb(34, 37, 255), rgb(159, 202, 236));
     margin-top: 20px;
     border: 2px solid #000000;
     width: 70%;
@@ -250,6 +250,7 @@ img {
 
   h4 {
     text-align: center;
+    color: #f2f5ff;
     font-size: 22px;
   }
 
