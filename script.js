@@ -145,12 +145,46 @@ for(let i = 0; i < li.length; i++)
 
 div.appendChild(list);
 
+function dynamicSearch1()
+{
+    let input = document.getElementById("input1");
+    let filter = input.value.toUpperCase();
+    var mylist1 = document.getElementById("myList");
+    var listElement1 = mylist1.getElementsByTagName("li");
+    var contentBlk = document.getElementById("myCB");
+    let x, txtValue;
+
+    contentBlk.style.display = "block";
+
+    for(let i = 0; i < li.length; i++)
+    {
+        x = li[i].getElementsByTagName("span")[0];
+
+        txtValue = x.textContent;
+
+        if(txtValue.indexOf(filter) > -1)
+        {
+            listElement1[i].style.display = "";
+        }
+
+        else
+        {
+            listElement1[i].style.display = "none";
+        }
+    }
+
+    if(input.value.length == 0 || isNaN(input.value))
+    {
+        contentBlk.style.display = "none";
+    }
+}
+
 function dynamicSearch2()
 {
     let input = document.getElementById("input2");
     let filter = input.value.toUpperCase();
-    var mylist = document.getElementById("myList");
-    var listElement = mylist.getElementsByTagName("li");
+    var mylist2 = document.getElementById("myList");
+    var listElement2 = mylist2.getElementsByTagName("li");
     var contentBlk = document.getElementById("myCB");
     let x, txtValue;
 
@@ -164,16 +198,16 @@ function dynamicSearch2()
 
         if(txtValue.toUpperCase().indexOf(filter) > -1)
         {
-            listElement[i].style.display = "";
+            listElement2[i].style.display = "";
         }
 
         else
         {
-            listElement[i].style.display = "none";
+            listElement2[i].style.display = "none";
         }
     }
 
-    if(input.value.length == 0)
+    if(input.value.length == 0 || !isNaN(input.value))
     {
         contentBlk.style.display = "none";
     }
