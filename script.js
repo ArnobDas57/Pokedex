@@ -151,7 +151,10 @@ function dynamicSearch2()
     let filter = input.value.toUpperCase();
     var mylist = document.getElementById("myList");
     var listElement = mylist.getElementsByTagName("li");
+    var contentBlk = document.getElementById("myCB");
     let x, txtValue;
+
+    contentBlk.style.display = "block";
 
     for(let i = 0; i < li.length; i++)
     {
@@ -168,5 +171,10 @@ function dynamicSearch2()
         {
             listElement[i].style.display = "none";
         }
+    }
+
+    if(input.value.length == 0)
+    {
+        contentBlk.style.display = "none";
     }
 }

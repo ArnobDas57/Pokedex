@@ -245,6 +245,7 @@ img {
     border: 2px solid #000000;
     width: 70%;
     text-align: left;
+    display: none;
   }
 
   h4 {
