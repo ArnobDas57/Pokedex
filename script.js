@@ -143,6 +143,7 @@ for(let i = 0; i < li.length; i++)
     var srcPath = li[i].getElementsByTagName("img")[0].src;
     var listImage = document.createElement("img");
     listImage.src = srcPath;
+    listImage.id = "searchImages"
 
     listElement.appendChild(listImage);
     list.appendChild(listElement);

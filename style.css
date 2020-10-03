@@ -272,3 +272,13 @@ img {
   .newList:hover:not(.header) {
     background-color: rgb(172, 158, 158);
   }
+
+  #searchImages
+  {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+  }
