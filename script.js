@@ -133,13 +133,18 @@ list.className = "divList";
 list.id = "myList"
 var ul = document.getElementById("poke-list");
 var li = ul.getElementsByClassName("pokemonImages");
-var listElement;
 
 for(let i = 0; i < li.length; i++)
 {
-    listElement = document.createElement("li");
+    var listElement = document.createElement("li");
     listElement.textContent = li[i].textContent; 
     listElement.setAttribute("class","newList");
+
+    var srcPath = li[i].getElementsByTagName("img")[0].src;
+    var listImage = document.createElement("img");
+    listImage.src = srcPath;
+
+    listElement.appendChild(listImage);
     list.appendChild(listElement);
 }
 
