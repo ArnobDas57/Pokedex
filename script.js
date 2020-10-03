@@ -14,11 +14,11 @@ function validateInput1()
         popup.style.display = "block";
 
         text = "Input not valid - Please enter a number between 1-20";
-        document.getElementById("p1").innerHTML = text;
-        document.getElementById("p2").innerHTML = " ";
-        document.getElementById("p3").innerHTML = " ";
-        document.getElementById("p4").innerHTML = " ";
-        document.getElementById("p5").innerHTML = " ";
+        document.getElementById("p1").textContent = text;
+        document.getElementById("p2").textContent = " ";
+        document.getElementById("p3").textContent = " ";
+        document.getElementById("p4").textContent = " ";
+        document.getElementById("p5").textContent = " ";
     }
 
     //if criteria is met popup block appears and shows up to 5 results
@@ -35,7 +35,7 @@ function validateInput1()
             if((li[i].textContent).includes(searchInput1))
             {
                 text = li[i].textContent;
-                document.getElementById("p" + (counter + 1)).innerHTML = text;
+                document.getElementById("p" + (counter + 1)).textContent = text;
                 counter++;
             }
 
@@ -65,11 +65,11 @@ function validateInput2()
             popup.style.display = "block";
 
             text = "Input not valid - Please enter letters A-Z or a-z and no more than 20 characters";
-            document.getElementById("p1").innerHTML = text;
-            document.getElementById("p2").innerHTML = " ";
-            document.getElementById("p3").innerHTML = " ";
-            document.getElementById("p4").innerHTML = " ";
-            document.getElementById("p5").innerHTML = " ";
+            document.getElementById("p1").textContent = text;
+            document.getElementById("p2").textContent = " ";
+            document.getElementById("p3").textContent = " ";
+            document.getElementById("p4").textContent = " ";
+            document.getElementById("p5").textContent = " ";
         }
     }
 
@@ -79,11 +79,11 @@ function validateInput2()
         popup.style.display = "block";
 
         text = "Input not valid - Please enter letters A-Z or a-z and no more than 20 characters";
-        document.getElementById("p1").innerHTML = text;
-        document.getElementById("p2").innerHTML = " ";
-        document.getElementById("p3").innerHTML = " ";
-        document.getElementById("p4").innerHTML = " ";
-        document.getElementById("p5").innerHTML = " ";
+        document.getElementById("p1").textContent = text;
+        document.getElementById("p2").textContent = " ";
+        document.getElementById("p3").textContent = " ";
+        document.getElementById("p4").textContent = " ";
+        document.getElementById("p5").textContent = " ";
     }
 
     //if there are no errors in the search box input then else statement will run
@@ -100,7 +100,7 @@ function validateInput2()
             if((li[i].textContent).includes(filter))
             {
                 text = li[i].textContent;
-                document.getElementById("p" + (counter + 1)).innerHTML = text;
+                document.getElementById("p" + (counter + 1)).textContent = text;
                 counter++;
             }
 
@@ -143,7 +143,7 @@ for(let i = 0; i < li.length; i++)
     var srcPath = li[i].getElementsByTagName("img")[0].src;
     var listImage = document.createElement("img");
     listImage.src = srcPath;
-    listImage.id = "searchImages"
+    listImage.id = "searchImages";
 
     listElement.appendChild(listImage);
     list.appendChild(listElement);
